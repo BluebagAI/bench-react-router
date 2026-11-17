@@ -1,3 +1,5 @@
+> **Benchmark copy.** This repository is an unmodified copy of [remix-run/react-router](https://github.com/remix-run/react-router) at commit [`65a90544aca0d33112d29657c156e766b8481b2d`](https://github.com/remix-run/react-router/commit/65a90544aca0d33112d29657c156e766b8481b2d), used to benchmark CI runners on the project's own Playwright suite. It is not affiliated with or endorsed by the project. The only changes: this note, `.github/workflows/bench.yml` (run by hand only), and the project's other GitHub Actions workflows and Dependabot config removed so nothing runs on its own. The project's license applies (see the license file). Each benchmark run's logs and test results are saved on the [`bench-results`](../../tree/bench-results) branch.
+
 [![npm package][npm-badge]][npm] [![build][build-badge]][build]
 
 [npm-badge]: https://img.shields.io/npm/v/react-router-dom.svg

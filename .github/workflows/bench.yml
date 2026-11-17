@@ -1,0 +1,66 @@
+# Benchmark copy of remix-run/react-router's integration-pr-ubuntu.yml + shared-integration.yml
+# (node 22, chromium, one job, as upstream). Same steps and commit on every runner; only the
+# test step differs. Retries and workers come from integration/playwright.config.ts with CI=true.
+name: bench
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        type: choice
+        options: [boba-turbo, boba-standard, github-16, blacksmith-16, github-4, blacksmith-4]
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+  actions: read
+env:
+  CI: true
+jobs:
+  integration:
+    name: integration (${{ inputs.runner }})
+    runs-on: ${{ startsWith(inputs.runner, 'boba') && 'coldtea-boba' || inputs.runner == 'github-16' && 'bench-16' || inputs.runner == 'github-4' && 'ubuntu-latest' || inputs.runner == 'blacksmith-4' && 'blacksmith-4vcpu-ubuntu-2404' || 'blacksmith-16vcpu-ubuntu-2404' }}
+    timeout-minutes: 45
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v6
+
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: ⎔ Setup node 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: 📥 Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: 📥 Install Playwright
+        run: npx playwright install --with-deps chromium
+
+      # Upstream's test:integration runs the build first; it moves into its own step.
+      - name: ⚙️ Build
+        run: pnpm build
+
+      - name: 👀 Run Integration Tests on Boba
+        if: startsWith(inputs.runner, 'boba')
+        uses: coldteadotai/boba@v1
+        with:
+          config: integration/playwright.config.ts
+          project: chromium
+          turbo: ${{ inputs.runner == 'boba-turbo' }}
+          fail-fast: false
+
+      - name: 👀 Run Integration Tests
+        if: ${{ !startsWith(inputs.runner, 'boba') }}
+        run: npx playwright test --config ./integration/playwright.config.ts --project=chromium --reporter=list,json
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: results.json
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && !startsWith(inputs.runner, 'boba') }}
+        with:
+          name: results-${{ inputs.runner }}
+          path: results.json
+          retention-days: 30
