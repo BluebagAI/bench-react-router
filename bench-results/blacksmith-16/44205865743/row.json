@@ -1,0 +1,39 @@
+{
+ "at": "2026-11-18T00:19:27+00:00",
+ "suite": "react-router",
+ "repo": "BluebagAI/bench-react-router",
+ "runner": "blacksmith-16",
+ "shards": "1",
+ "note": "measured",
+ "run": "https://github.com/BluebagAI/bench-react-router/actions/runs/44205865743",
+ "run_id": 44205865743,
+ "sha": "10b87ff62714e588c23c2aa57bf158d60e8b5d12",
+ "conclusion": "success",
+ "wall_s": 402,
+ "queue_s": 8,
+ "job_s": 402,
+ "jobs": 1,
+ "vcpu_min": 107.2,
+ "billed_min": 7,
+ "usd": 0.224,
+ "tests": {
+  "passed": 1240,
+  "failed": 0,
+  "flaky": 10,
+  "skipped": 44,
+  "failed_tests": [],
+  "flaky_tests": [
+   "client-data-test.ts::child.clientAction/parent.childLoader::chromium",
+   "client-data-test.ts::child.clientLoader::chromium",
+   "client-data-test.ts::parent.clientLoader/child.clientLoader::chromium",
+   "rsc/route-discovery-test.ts::RSC (vite) bounds route discovery for documents and data::chromium",
+   "rsc/rsc-nojs-test.ts::Suppport throwing external redirect Response from render::chromium",
+   "rsc/rsc-nojs-test.ts::Suppport throwing external redirect Response from suspended render::chromium",
+   "scroll-test.ts::should scroll to hash locations with URL encoded characters::chromium",
+   "scroll-test.ts::should scroll to hash locations::chromium",
+   "vite-plugin-cloudflare-test.ts::handles Cloudflare env with plugin order reversed::chromium",
+   "vite-prerender-test.ts::Prerenders a static array of routes with server bundles::chromium"
+  ],
+  "files": 1
+ }
+}
