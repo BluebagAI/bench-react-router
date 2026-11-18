@@ -1,0 +1,147 @@
+[
+ {
+  "id": 134475020954,
+  "name": "integration (blacksmith-16)",
+  "html_url": "https://github.com/BluebagAI/bench-react-router/actions/runs/44206887867/job/134475020954",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-18T00:19:35Z",
+  "started_at": "2026-11-18T00:19:42Z",
+  "completed_at": "2026-11-18T00:25:38Z",
+  "labels": [
+   "blacksmith-16vcpu-ubuntu-2404"
+  ],
+  "runner_name": "blacksmith-16vcpu-ubuntu-2404-whlb6pt7b4flxavu",
+  "runner_group_name": "blacksmith scale sets - blacksmith-16vcpu-ubuntu-2404",
+  "steps": [
+   {
+    "name": "Set up job",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 1,
+    "started_at": "2026-11-18T00:19:43Z",
+    "completed_at": "2026-11-18T00:19:44Z"
+   },
+   {
+    "name": "Set up runner",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 2,
+    "started_at": "2026-11-18T00:19:44Z",
+    "completed_at": "2026-11-18T00:19:44Z"
+   },
+   {
+    "name": "\u2b07\ufe0f Checkout repo",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 3,
+    "started_at": "2026-11-18T00:19:44Z",
+    "completed_at": "2026-11-18T00:19:46Z"
+   },
+   {
+    "name": "\ud83d\udce6 Setup pnpm",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 4,
+    "started_at": "2026-11-18T00:19:46Z",
+    "completed_at": "2026-11-18T00:19:48Z"
+   },
+   {
+    "name": "\u2394 Setup node 22",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 5,
+    "started_at": "2026-11-18T00:19:48Z",
+    "completed_at": "2026-11-18T00:19:50Z"
+   },
+   {
+    "name": "\ud83d\udce5 Install deps",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 6,
+    "started_at": "2026-11-18T00:19:50Z",
+    "completed_at": "2026-11-18T00:19:55Z"
+   },
+   {
+    "name": "\ud83d\udce5 Install Playwright",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 7,
+    "started_at": "2026-11-18T00:19:55Z",
+    "completed_at": "2026-11-18T00:20:09Z"
+   },
+   {
+    "name": "\u2699\ufe0f Build",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 8,
+    "started_at": "2026-11-18T00:20:09Z",
+    "completed_at": "2026-11-18T00:20:27Z"
+   },
+   {
+    "name": "\ud83d\udc40 Run Integration Tests on Boba",
+    "status": "completed",
+    "conclusion": "skipped",
+    "number": 9,
+    "started_at": "2026-11-18T00:20:27Z",
+    "completed_at": "2026-11-18T00:20:27Z"
+   },
+   {
+    "name": "\ud83d\udc40 Run Integration Tests",
+    "status": "completed",
+    "conclusion": "failure",
+    "number": 10,
+    "started_at": "2026-11-18T00:20:27Z",
+    "completed_at": "2026-11-18T00:25:34Z"
+   },
+   {
+    "name": "Run actions/upload-artifact@v4",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 11,
+    "started_at": "2026-11-18T00:25:34Z",
+    "completed_at": "2026-11-18T00:25:35Z"
+   },
+   {
+    "name": "Post \u2394 Setup node 22",
+    "status": "completed",
+    "conclusion": "skipped",
+    "number": 19,
+    "started_at": "2026-11-18T00:25:35Z",
+    "completed_at": "2026-11-18T00:25:35Z"
+   },
+   {
+    "name": "Post \ud83d\udce6 Setup pnpm",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 20,
+    "started_at": "2026-11-18T00:25:35Z",
+    "completed_at": "2026-11-18T00:25:35Z"
+   },
+   {
+    "name": "Post \u2b07\ufe0f Checkout repo",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 21,
+    "started_at": "2026-11-18T00:25:35Z",
+    "completed_at": "2026-11-18T00:25:35Z"
+   },
+   {
+    "name": "Complete runner",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 22,
+    "started_at": "2026-11-18T00:25:35Z",
+    "completed_at": "2026-11-18T00:25:35Z"
+   },
+   {
+    "name": "Complete job",
+    "status": "completed",
+    "conclusion": "success",
+    "number": 23,
+    "started_at": "2026-11-18T00:25:35Z",
+    "completed_at": "2026-11-18T00:25:35Z"
+   }
+  ]
+ }
+]

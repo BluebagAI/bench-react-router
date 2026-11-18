@@ -1,0 +1,37 @@
+{
+ "at": "2026-11-18T00:25:49+00:00",
+ "suite": "react-router",
+ "repo": "BluebagAI/bench-react-router",
+ "runner": "blacksmith-16",
+ "shards": "1",
+ "note": "measured",
+ "run": "https://github.com/BluebagAI/bench-react-router/actions/runs/44206887867",
+ "run_id": 44206887867,
+ "sha": "10b87ff62714e588c23c2aa57bf158d60e8b5d12",
+ "conclusion": "failure",
+ "wall_s": 356,
+ "queue_s": 8,
+ "job_s": 356,
+ "jobs": 1,
+ "vcpu_min": 94.9,
+ "billed_min": 6,
+ "usd": 0.192,
+ "tests": {
+  "passed": 1243,
+  "failed": 1,
+  "flaky": 6,
+  "skipped": 44,
+  "failed_tests": [
+   "scroll-test.ts::should scroll to hash locations::chromium"
+  ],
+  "flaky_tests": [
+   "rsc/route-discovery-test.ts::RSC (vite) bounds route discovery for documents and data::chromium",
+   "rsc/rsc-nojs-test.ts::Supports React Server Functions side-effect redirect headers for document requests::chromium",
+   "rsc/rsc-nojs-test.ts::Suppport throwing redirect Response from suspended render::chromium",
+   "scroll-test.ts::should scroll to hash locations with URL encoded characters::chromium",
+   "single-fetch-test.ts::allows fine-grained revalidation::chromium",
+   "vite-plugin-cloudflare-test.ts::handles Cloudflare env::chromium"
+  ],
+  "files": 1
+ }
+}
